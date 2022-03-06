@@ -1,0 +1,25 @@
+#! /bin/sh
+
+WORK=Bombcalc_run
+NETPBM=/server/bin/netpbm/current/bin
+PATH=$WORK:$NETPBM:$PATH
+
+cd $WORK
+
+#   We increase the permitted requests from the default of 100 to
+#   300 because the stateless image requests will be counted as well
+#   as main page CGI requests.  We do this rather than exclude the
+#   image requests because it's the image requests which are actually
+#   expensive, and somebody may set up a robot to make them bypassing
+#   the regular page request.  It might be nice to detect when we're
+#   denying an image request and return an image instead of an HTML
+#   page.
+$CGIEXE/self_denial -tBombcalc -n300 -c
+if [ $? -eq 1 ]
+then
+    echo Location: http://www.fourmilab.ch/nav/topics/denied.html
+    echo ''
+    exit
+fi
+
+nice -12 perl bombcalc.pl

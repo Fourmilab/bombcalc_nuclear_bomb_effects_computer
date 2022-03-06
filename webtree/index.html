@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Nuclear Bomb Effects Computer</title>
+<link rel="stylesheet" href="/documents/styles/standard_screen.css" type="text/css" />
+<style type="text/css">
+    p {
+    	text-align: justify;
+    }
+</style>
+<meta name="keywords" content="nuclear, bomb, effects, computer, calculator, weapon, slide, rule" />
+<meta name="description" content="Nuclear Bomb Effects Computer" />
+<meta name="author" content="John Walker" />
+<meta name="robots" content="index" />
+<script type="text/javascript" language="JavaScript" src="bombcalc.js">
+</script>
+</head>
+
+<body class="standard">
+
+<center>
+<table>
+<tr>
+<td width="10%">
+    <a href="/"><img src="/images/logo/swlogo.png" width="82" height="74" border="0" alt="Fourmilab home" /></a>
+</td>
+
+<td width="*" align="center">
+    <h1>
+    <em>Strangelove Slide Rule</em><br />
+    Nuclear Bomb Effects Computer
+    </h1>
+    <big><b><em>Online Edition</em></b></big><br />
+    by <a href="/">John Walker</a>
+</td>
+
+<td width="10%" align="right">
+    <img src="figures/nuke64.jpg"
+    	width="64" height="126" border="0"
+	alt="Tumbler Charlie detonation 1952-04-22 17:30 UTC 31 kt airdrop, Nevada Test Site, Area 7" />
+</td>
+</tr>
+</table>
+</center>
+
+<hr />
+
+<p />
+
+<center>
+<img src="figures/enwcalc.jpg" width="640" height="500" alt="Effects of Nuclear Weapons and Computer (1962 Edition)" />
+</center>
+
+<h2>Strangelove Showdown</h2>
+
+<p>
+Back when I was in college in the 1960s, there was no better way for
+a larval engineer or scientist to stand out from those pursuing more
+mushy majors than swaggering around with a fancy slide rule in a
+spiffy leather holster dangling from his belt.  &ldquo;Well now mister
+phil-oss-a-pher, I don't rightly cotton to your kind of fuzzy
+thinkin'. How about we settle this, just you and me&mdash;logarithms at
+ten paces.&rdquo;   Then there were the peaceniks&hellip;. 
+Now, I'm for peace as much as the next fellow, but it's always seemed
+to me a clear lesson of history that unilateral disarmament in
+the face of aggressive tyranny is not the way to peace.  Maybe it's
+one of those slippery concepts which an understanding of feedback
+systems and differential equations helps one to grasp more firmly
+than an encyclopedic knowledge of the works of nineteenth century
+political theorists.
+</p>
+
+<p>
+Anyway, when some champion of human liberty in a Che Guevara T-shirt
+and Mao jacket was haranguing his audience with claims like &ldquo;A single
+Hiroshima bomb set off downtown would annihilate this university and
+all of us in the blink of an eye&rdquo;, what better way to burnish
+one's Strangelovian credentials than to whip out a handy-dandy nuclear
+bomb computer slide rule, whip&mdash;slip&mdash;slide, and interrupt,
+&ldquo;Naaah&hellip;fifteen kilotons at five miles? 
+Surface burst?  Why, that's only a quarter to a third of a pound per
+square inch overpressure&mdash;it'll probably break some window glass but
+that's about it.&rdquo;  Flipping the slide rule over, &ldquo;The flash isn't
+even enough to cause sunburn, and the immediate radiation is next to
+nothing.&rdquo;  For some unfathomable reason, this never seemed to either
+carry the argument or suitably impress chicks.
+</p>
+
+<h2>Collectible Computer</h2>
+
+<p>
+Back in those psychedelic days of yore, you could order your own
+fantastic pastel plastic nuclear bomb effects computer directly  from
+the U.S. Government Printing Office for a single green dollar, and
+for three dollars more, obtain the authoritative 730 page book,
+<cite>The Effects of Nuclear Weapons</cite>, upon which it was
+based.  With the winding down of the nuclear arms race and eventual
+end of the Cold War, interest in the actual consequences of setting
+off nuclear weapons waned.  The book and computer were last updated
+in 1977, and subsequently went out of print.  By the 1990s they had
+become something of a collectors' item, with mint copies of the book
+and computer selling for hundreds of dollars, although bargains
+remained available if you were patient and looking for a copy to
+read, not store away in the hope of eventually reselling it to a
+greater fool.
+</p>
+
+<p>
+Since these were publications of the U.S. federal government, which
+does not assert copyright on its documents, they have been in the
+public domain since inception, but interest to date has not motivated
+anybody to republish them.  Fortunately, a copy of the 1977 third
+edition of the book has been scanned and is now
+<a href="/etexts/www/effects/" target="Fourmilab_Bombcalc_Effects">available
+online</a>.
+The existence of this Web resource (in PDF files for each chapter,
+which can be printed if a paper copy is required), seems to have
+restored some sanity to the prices quoted for used copies of the
+original books, but that still leaves the bomb effects slide rule a
+difficult item to obtain.
+</p>
+
+<h2>Internet Implementation</h2>
+
+<p>
+My nostalgia for this particular relic of the Cold War was such that
+I've had a project to produce an online edition on my to-do list for
+more than five years. Like many items on this embarrassingly long and
+all too infrequently shortened list of unrealised ambitions, it's
+something I half expected someone else to do long before I got to it.
+This would be perfectly fine with me&mdash;I undertake these projects
+because I want to see them done, and crossing off an item without the
+wear and tear of doing it myself couldn't make me happier.  In fact,
+scanning (and possibly OCR-ing) <cite>The Effects of Nuclear
+Weapons</cite> was an item on my list before the fine folks at
+Princeton got the job done.
+</p>
+
+<p>
+I originally envisioned an online interactive calculator,
+along the lines of a spreadsheet, either in JavaScript or, to
+be really super-cool, as a server based CGI application written entirely
+in Ada (doubly appropriate, not just as a programming language associated
+with military applications, but because the
+<a href="/babbage/sketch.html#NoteA" target="_blank">Lady</a> after which it is named
+also shares a name with the creators of the bomb calculator: the
+Lovelace Foundation&mdash;better known for devising the diabolical medical torture
+tests for the Project Mercury astronauts chronicled by Tom Wolfe in
+<cite><a href="http://www.amazon.com/dp/0553381350?tag=fourmilabwwwfour"
+    target="Amazon_Fourmilab">The Right Stuff</a></cite>).
+I've used this model for various other Web resources, for example
+the <a href="/">Fourmilab</a>
+<cite><a href="/documents/calendar/" target="_blank">Calendar Converter</a></cite>,
+but every time I looked into the details, I found that the fit
+between the bomb effects slide rule and a cell-and-number based
+calculator was rather poor.  As users of slide rules and nomograms
+(which excludes almost everybody under the age of forty) will appreciate,
+once you've &ldquo;set up&rdquo; the inputs to a calculation, a
+whole range of solutions can often be obtained for varying inputs just by
+reading numbers which line up along a scale.  Further, it's usually
+possible to work backwards from a result to discover
+families of inputs which produce it.  The bomb computer takes superb
+advantage of both of these characteristics.  For example, when you're
+computing the
+<a href="instructions.html#fallout"
+   target="Fourmilab_Bombcalc_Instructions">decay of fallout</a>
+from a detonation, setting up the dose rate at a single time permits
+the relative dose for any time between 12 minutes and 30 days after
+the burst to be read directly from the scale, or inverse
+questions answered like how long one must wait before the radiation
+declines to a specified level.  Or, suppose you're interested in the
+tradeoff between yield and accuracy to attack a buried,
+steel-reinforced bunker which requires an overpressure of 100 pounds
+per square inch (PSI) to bust.
+<a href="instructions.html#blastparams"
+   target="Fourmilab_Bombcalc_Instructions">Setting
+the overpressure scale</a> of the bomb computer to 100 PSI (opting
+here for an optimum height as opposed to a
+surface burst), one finds that with the roughly 100 metre accuracy of
+state of the art intercontinental missiles, a bomb on the order of
+one kiloton will do the deed, but with the &ldquo;general vicinity&rdquo;
+accuracy available with early ballistic missiles like the Atlas (2000
+foot / 600 metre circular error probable), a yield in excess of 100
+kilotons, almost five times that of the Nagasaki bomb, would be
+required.  Working numbers like these brings home the extent to which
+technological progress in metre-accuracy precision guided munitions,
+not the efforts of disarmament activists, have rendered nuclear
+weapons, as the man said (albeit in a different context) &ldquo;impotent and
+obsolete&rdquo;.
+</p>
+
+<p> Reflecting on the design advantages of the original calculator, I
+ended up concluding the best way to bring it to the Web would be in
+its original form&mdash;an interactive graphical reincarnation of the
+original plastic slide rule.  Many were the obstacles, due in part to
+the fact that I have only a single prototype and would never destroy
+the authenticity of such an artefact by disassembling it.  I will
+spare you the technical details&mdash;the result is now yours to explore.
+(If you're really interested in how this Web application was built,
+please see the <a href="production.html"
+target="Fourmilab_Bombcalc_Instructions">production notes</a>. Basing
+the online edition on the graphics of the original slide rule also
+made it easy to provide what's needed for those interested to <a
+href="brico.html" target="Fourmilab_Bombcalc_Instructions">build
+their own replica slide rule</a>.)
+</p>
+
+<h2>Detonation Definition</h2>
+
+<p>
+Enter yield and range for complete weapon effects, or
+time since detonation and relative dose rate for a fallout
+computation, into the forms below, click the &ldquo;Calculate&rdquo; button, and you'll
+see the results on the bomb effects computer
+set to the specified values. (The two kinds of calculations
+have nothing to do with one another and simply happen to share the
+same slide rule; hence, they are requested on separate forms below). 
+To understand the results, refer to the
+<a href="instructions.html" target="Fourmilab_Bombcalc_Instructions">bomb computer instructions</a>,
+which are transcribed from the sheet which accompanied the slide
+rule, with illustrations added to show how values are read from the
+various scales.  You can change the size of the calculator
+image by entering the desired size (up to a limit of 1575
+pixels&mdash;that's all the resolution there is in the scan and, for that
+matter, detail on the plastic slide rule), and rotate the slide rule
+image either by entering an angle or clicking on the portion of the
+image you wish to appear at the top.
+</p>
+
+<p />
+
+<form method="get" action="/cgi-bin/Bombcalc" onsubmit="return checkCalc(this)">
+<center>
+<table bgcolor="#D0D0D0" border="2" cellpadding="5" width="66%">
+
+    <tr>
+    <th colspan="3" align="center">
+    Weapon Effects Calculation
+    </th>
+    </tr>
+
+    <tr>
+    <td>
+    Yield:</td>
+    <td>
+    <input type="text" name="yield" value="20" size="10" /></td>
+    <td>
+    <input type="radio" name="yunit" checked="checked" value="1" />&nbsp;Kilotons
+    <input type="radio" name="yunit" value="1000" />&nbsp;Megatons
+    <br />
+    <input type="checkbox" name="sburst" value="y" />&nbsp;Surface burst thermal effects?
+    </td>
+    </tr>
+
+    <tr>
+    <td>
+    Range:</td>
+    <td>
+    <input type="text" name="range" value="3" size="10" /></td>
+    <td>
+    <input type="radio" name="runit" checked="checked" value="1" />&nbsp;Miles
+    <input type="radio" name="runit" value="0.62137119" />&nbsp;Kilometres
+    </td>
+    </tr>
+    
+    <tr>
+    <td colspan="3" align="center">
+    <input type="submit" value=" Calculate " />
+    </td>
+    </tr>
+
+    <tr>
+    <td>
+    Rotate:</td>
+    <td>
+    <input type="text" name="rotate" value="0" size="10" /></td>
+    <td>
+    Degrees counterclockwise
+    </td>
+    </tr>
+
+    <tr>
+    <td>
+    Image size:</td>
+    <td>
+    <input type="text" name="imsize" value="800" size="10" /></td>
+    <td>
+    Pixels
+    </td>
+    </tr>
+
+</table>
+</center>
+</form>
+
+<p style="margin-top: 0.5em;" />
+
+<form method="get" action="/cgi-bin/Bombcalc" onsubmit="return checkFallout(this)">
+<center>
+<table bgcolor="#D0D0D0" border="2" cellpadding="5" width="66%">
+
+    <tr>
+    <th colspan="3" align="center">
+    Fallout Rate Calculation
+    </th>
+    </tr>
+
+    <tr>
+    <td>
+    Time after detonation:</td>
+    <td>
+    <input type="text" name="ftime" value="1" size="10" /></td>
+    <td>
+    <input type="radio" name="ftunit" checked="checked" value="1" />&nbsp;Hours
+    <input type="radio" name="ftunit" value="24" />&nbsp;Days
+    </td>
+    </tr>
+
+    <tr>
+    <td>
+    Relative dose rate:</td>
+    <td>
+    <input type="text" name="doserate" value="10000" size="10" /></td>
+    <td>
+    Arbitrary units
+    </td>
+    </tr>
+    
+    <tr>
+    <td colspan="3" align="center">
+    <input type="submit" value=" Calculate " />
+    </td>
+    </tr>
+
+    <tr>
+    <td>
+    Rotate:</td>
+    <td>
+    <input type="text" name="rotate" value="0" size="10" /></td>
+    <td>
+    Degrees counterclockwise
+    </td>
+    </tr>
+
+    <tr>
+    <td>
+    Image size:</td>
+    <td>
+    <input type="text" name="imsize" value="800" size="10" /></td>
+    <td>
+    Pixels
+    </td>
+    </tr>
+
+</table>
+<p />
+
+</center>
+</form>
+
+<h2>Why the 1962 Edition?</h2>
+
+<p>
+This interactive Web-based implementation of the quintessential Cold War
+weaponeer's <em lang="la">vade mecum</em> is based on the 1962
+revised edition.  Since I can already hear the vintage whiners and hate
+kiddies spooling up through the octaves and decibels to decry
+this choice over the most recent 1977 third edition (as far as I know,
+there were no editions between these two), please permit me to
+explain.  First and foremost, the 1962 slide rule is <em>the one I
+have</em>, and however spiffy I considered this project to be, I
+wasn't about to spend a wad of money and a lot of time chasing down
+the newer edition (which, to be equally authentic, would have to come
+with the matching version of the accompanying
+<a href="instructions.html"
+   target="Fourmilab_Bombcalc_Instructions">instructions</a>,
+which, as
+a single folded sheet of paper, is easily lost and missing from
+many copies offered for sale.)  But also, this is an
+artefact of the Cold War, and 1962 is the very heart of that epoch.
+Herman Kahn's
+<cite><a href="http://www.amazon.com/dp/0313200602?tag=fourmilabwwwfour"
+    target="Amazon_Fourmilab">On Thermonuclear War</a></cite>
+was published in 1960, and his
+<cite><a href="http://www.amazon.com/dp/B0006AXSF8?tag=fourmilabwwwfour"
+    target="Amazon_Fourmilab">Thinking about the Unthinkable</a></cite>
+hit the shelves in 1962.  On the fiction front, the novel
+<cite><a href="http://www.amazon.com/dp/B0007HJGH4?tag=fourmilabwwwfour"
+    target="Amazon_Fourmilab">Red Alert</a></cite> came out in 1958,
+followed by
+<cite><a href="http://www.amazon.com/dp/088001654X?tag=fourmilabwwwfour"
+    target="Amazon_Fourmilab">Fail-Safe</a></cite> in 1962,
+with the films they inspired,
+<cite><a href="http://www.amazon.com/dp/B000055Y0X?tag=fourmilabwwwfour"
+    target="Amazon_Fourmilab">Dr.&nbsp;Strangelove</a></cite> and
+<cite><a href="http://www.amazon.com/dp/B00004XPPE?tag=fourmilabwwwfour"
+    target="Amazon_Fourmilab">Fail-Safe</a></cite>
+both debuting in 1964.
+In the real world, in late 1961, the Soviet Union exploded the most powerful
+nuclear weapon ever developed, a 50 megaton three stage thermonuclear device
+capable of 100 megatons (with vastly more fallout) were its lead tampers
+replaced by uranium.  The United States responded to the resumption of Soviet
+atmospheric testing with its own test series both in Nevada and the Pacific
+(including the Operation Fishbowl
+<a href="http://www.amazon.com/dp/B00004XMTE?tag=fourmilabwwwfour"
+    target="Amazon_Fourmilab">nukes in space</a>),
+which continued throughout 1962.  In February 1960, France exploded its first
+nuclear bomb and continued testing in Algeria through 1966, and China got
+into the game with its first detonation at Lop Nor in October 1964.
+The British deployed their first strategic nuclear missile, the megaton class air-to-surface
+Blue Steel, in December 1962.
+And in October 1962, the world came as close to the brink as it ever
+has during the eyeball-to-eyeball
+<a href="http://www.amazon.com/dp/0393317900?tag=fourmilabwwwfour"
+    target="Amazon_Fourmilab">Cuban missile crisis</a>, while
+Civil Defence pamphlets encouraged U.S. homeowners to turn a corner of their
+basement into a family fallout shelter.
+</p>
+
+<p>
+Yes, 1962 was the very high point of the High Cold War, so it's
+entirely fitting and proper that this twenty-first century
+re-creation be based on a relic dating from that year, not 1977,
+which cannot help but summon images of the effete and pusillanimous
+Carter administration, absurd MX peekaboo racetrack deployment
+schemes, and the nascent nuclear freeze movement in the U.S.
+</p>
+
+<h3 class="nav"><a href="instructions.html" target="Fourmilab_Bombcalc_Instructions">Bomb Effects Computer Instructions</a></h3>
+
+<h3 class="nav"><cite><a href="/etexts/www/effects/"
+    target="Fourmilab_Bombcalc_Effects">The Effects
+    of Nuclear Weapons</a></cite></h3>
+<blockquote style="margin-top: 0px; margin-bottom: 0px;">
+    Search for used copies at:
+    <ul style="margin-top: 0px; margin-bottom: 0px;">
+    	<li><a href="http://www.amazon.com/exec/obidos/redirect?link_code=ur2&amp;camp=1789&amp;tag=fourmilabwwwfour&amp;creative=9325&amp;path=external-search%3Fsearch-type=as%26field-author=Glasstone%26field-title=effects%20nuclear%20weapons%26index=books"
+	      target="Amazon_Fourmilab">Amazon.com</a></li>
+    	<li><a href="http://www.abebooks.com/servlet/BookSearchPL?ph=2&amp;an=Glasstone&amp;tn=effects&amp;nuclear+weapons"
+	       target="Amazon_Fourmilab">Abebooks.com</a></li>
+	<li><a href="http://search.ebay.com/effects-nuclear-weapons_Books"
+	       target="Amazon_Fourmilab">eBay Auctions</a></li>
+    </ul>
+
+</blockquote>
+
+<h3 class="nav"><a href="brico.html" target="Fourmilab_Bombcalc_Instructions">Build Your Own Bomb Effects Computer Slide Rule</a></h3>
+
+<h3 class="nav"><a href="production.html" target="Fourmilab_Bombcalc_Instructions">Production Notes</a></h3>
+
+<h3 class="nav"><cite><a href="/etexts/www/atomic_tests_nevada/">Atomic Test Effects in
+    the Nevada Test Site Region</a></cite></h3>
+
+<h3 class="nav"><a href="/">Fourmilab Home Page</a></h3>
+
+<p />
+<hr />
+<table align="right">
+<tr><td>
+<p />
+<form name="feedback" method="post" action="/cgi-bin/FeedbackForm.pl">
+<input type="hidden" name="pagetitle" value="&lt;cite&gt;Nuclear Bomb Effects Computer&lt;/cite&gt;" />
+<input type="hidden" name="backlink" value="Back to &lt;cite&gt;Nuclear Bomb Effects Computer&lt;/cite&gt;" />
+<input type="submit" class="feedback" value=" Send Feedback " />
+</form>
+</td></tr>
+<tr><td align="center">
+    <a href="http://validator.w3.org/check?uri=http://www.fourmilab.ch/bombcalc/index.html"
+       target="_blank"><img
+       src="/images/icons/valid-xhtml10.png"
+       alt="Valid XHTML 1.0" height="31" width="88"
+       border="0" /></a>
+</td></tr>
+</table>
+<address>
+by <a href="/">John Walker</a><br />
+June 2005
+</address>
+
+</body>
+</html>
